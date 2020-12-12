@@ -10,9 +10,17 @@ socket.on('connect',  function(){
 });
 
 socket.on('newMessage',  function(newMessage){
-  console.log('new email', newMessage);
+  console.log('new message', newMessage);
 });
 
 socket.on('disconnect',  function(){
   console.log('disconnected from server');
 });
+
+// socket.on('newMessage',  function(welcomeMessage){
+//   console.log('welcome to the chat app',welcomeMessage);
+// });
+//
+// socket.on('newMessage',  function(welcomeMessage){
+//   console.log('new member joined ',welcomeMessage);
+// });
