@@ -33,7 +33,20 @@ jQuery('#message-form').on('submit',function(e){
   },function(){
     //console.log('got it',data);
   });
-
-
-
 })
+
+
+
+var locatioButton =jQuery('#send-location');
+locatioButton.on('click',function(){
+  if (!navigator.geolocation) {
+    return alert('geolocation not suppported by browser');
+  }
+
+  navigator.geolocation.getCurrentPosition(function(position){
+    console.log(position);
+  },function () {
+    alert('unable to get geolocation');
+  });
+
+}); 
